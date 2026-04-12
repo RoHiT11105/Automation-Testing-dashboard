@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Suite" parallel="tests" thread-count="3">
+
+    <listeners>
+        <listener class-name="com.automation.automationregression.reports.TestListener"/>
+    </listeners>
+
+    <!-- UI Tests -->
+    <test name="UI Tests">
+        <classes>
+            <class name="com.automation.automationregression.tests.GoogleTest"/>
+            <class name="com.automation.automationregression.tests.InvalidTest"/>
+        </classes>
+    </test>
+
+    <!-- API Tests -->
+    <test name="API Tests">
+        <classes>
+            <class name="com.automation.automationregression.api.ApiTest"/>
+        </classes>
+    </test>
+
+</suite>
